@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IFactory <TResult,T1,T2>
 {
-    public TResult Create(T1 arg1, T2 arge2);
+    public TResult Create(T1 arg1, T2 arg2);
 }

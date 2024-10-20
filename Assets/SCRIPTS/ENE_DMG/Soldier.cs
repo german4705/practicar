@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Soldier : MonoBehaviour, IDamageable
 {
+   
+
     public int life;
     [SerializeField] private int dmg;
+
+   
+   
     public void GetDamage()
     {
         life -= dmg;
@@ -15,15 +20,5 @@ public class Soldier : MonoBehaviour, IDamageable
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

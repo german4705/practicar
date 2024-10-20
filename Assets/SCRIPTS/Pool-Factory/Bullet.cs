@@ -17,17 +17,17 @@ public class Bullet : MonoBehaviour
         remaingLife = lifetime;
     }
 
-    public void Initialized(IPool<Bullet> pool)
+    public void Initialized(IPool<Bullet>pool)
     {
         this.pool = pool;
     }
 
     private void Update()
     {
-
+        
         transform.position += transform.forward * speed * Time.deltaTime;
         remaingLife -= Time.deltaTime;
-        if (remaingLife <= 0)
+        if(remaingLife<=0)
         {
             gameObject.SetActive(false);
             pool.Return(this);
@@ -36,13 +36,11 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        IDamageable damageable = other.GetComponent<IDamageable>(); 
-        if(damageable!=null)
+        IDamageable damageable = other.GetComponent<IDamageable>();
+        if (damageable != null)
         {
             damageable.GetDamage();
         }
     }
 
-  // todo con lo que colisione y tenga implementado la interfaz IDamageable guardalo en damageable
-  //llama al metodo de la interfaz, para que el enemigo que contenga la interfaz llame al metodo y aplique logica interna propia del enemigo.
 }

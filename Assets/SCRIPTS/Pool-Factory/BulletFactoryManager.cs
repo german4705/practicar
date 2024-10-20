@@ -11,7 +11,7 @@ public class BulletFactoryManager : MonoBehaviour
 
     [SerializeField]
     private BulletFactory FireFactory;
-    private Pool<Bullet> FirePool = new Pool<Bullet>();
+    private Pool<Bullet> FirePool= new Pool<Bullet>();
 
     private void Awake()
     {
@@ -24,15 +24,15 @@ public class BulletFactoryManager : MonoBehaviour
         Fire
     }
 
-    public static IFactory<Bullet, Vector3, Quaternion> GetFactoryOf(BulletTypes type)
+    public static IFactory<Bullet,Vector3,Quaternion> GetFactoryOf(BulletTypes type)
     {
-        switch (type)
+         switch (type)
         {
             case BulletTypes.Regular:
                 return Instance.RegularFactory;
-            case BulletTypes.Fire:
+                     case BulletTypes.Fire:
                 return Instance.FireFactory;
-            default: return null;
+                    default: return  null;
         }
     }
 

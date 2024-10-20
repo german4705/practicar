@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pool<T> : IPool<T>
+public class Pool<T> : IPool<T> 
 {
     private Stack<T> stack = new Stack<T>();
 
