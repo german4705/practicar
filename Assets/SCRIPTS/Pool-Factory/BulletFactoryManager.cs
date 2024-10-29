@@ -6,11 +6,11 @@ public class BulletFactoryManager : MonoBehaviour
 {
     private static BulletFactoryManager Instance;
     [SerializeField]
-    private BulletFactory RegularFactory;
+    private BulletFactory EnemyFactory;
     private Pool<Bullet> RegularPool = new Pool<Bullet>();
 
     [SerializeField]
-    private BulletFactory FireFactory;
+    private BulletFactory Playerfactory;
     private Pool<Bullet> FirePool= new Pool<Bullet>();
 
     private void Awake()
@@ -29,9 +29,9 @@ public class BulletFactoryManager : MonoBehaviour
          switch (type)
         {
             case BulletTypes.Regular:
-                return Instance.RegularFactory;
+                return Instance.EnemyFactory;
                      case BulletTypes.Fire:
-                return Instance.FireFactory;
+                return Instance.Playerfactory;
                     default: return  null;
         }
     }

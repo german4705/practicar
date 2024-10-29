@@ -7,6 +7,7 @@ public class LifeHandle : MonoBehaviour, IObserved
    [SerializeField] 
     private int maxHealth;
     public int MaxHealth => maxHealth;
+
     public int CurrentHealth { get; private set; }
 
     private List<IObserver> observers = new List<IObserver>();

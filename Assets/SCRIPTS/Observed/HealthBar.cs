@@ -10,7 +10,9 @@ public class HealthBar : MonoBehaviour,IObserver
     private Image healthBar;
 
     [SerializeField]
-    private Boss boss;
+    private EnemyLIfe boss;
+
+
 
     public void Notify()
     {

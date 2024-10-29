@@ -40,6 +40,9 @@ public class Bullet : MonoBehaviour
         if (damageable != null)
         {
             damageable.GetDamage();
+            gameObject.SetActive(false);
+            pool.Return(this);
+
         }
     }
 
