@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.172795, g: 0.260024, b: 0.36692968, a: 1}
+  m_IndirectSpecularColor: {r: 0.1727952, g: 0.2600245, b: 0.36693013, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -439,8 +439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b1ef928b84c114d8f28769b055ee1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 0
-  shootingPoint: {fileID: 0}
   life: 100
   dmg: 50
 --- !u!1 &132405490
@@ -583,9 +581,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd5a40790b42fd40b327feeeb0c6116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkPointSaver: {fileID: 0}
   _speed: 5
   _force: 5
   _playerAnimator: {fileID: 0}
+  healt: 0
+  maxHealt: 0
+  HealtBar: {fileID: 0}
 --- !u!1 &261340050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1326,10 @@ PrefabInstance:
     - target: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       propertyPath: m_Name
       value: PlayerArmature
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5504259220806075266, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
@@ -4966,8 +4972,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a99c4f242e2d64381327a12080e2c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  lifetime: 0
 --- !u!1 &1750726379
 GameObject:
   m_ObjectHideFlags: 0
